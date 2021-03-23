@@ -1,3 +1,8 @@
+* {
+  box-sizing: border-box;
+}
+
+
 header {
   background-color: rgb(100, 96, 96);
   overflow: hidden;
