@@ -1,39 +1,38 @@
 * {
   box-sizing: border-box;
 }
+body{
+  position: relative;
+}
 
 
 header {
-  background-color: rgb(100, 96, 96);
-  overflow: hidden;
-  z-index: 9;
+  /* border: 3px rgb(236, 98, 98) dashed; */
+  overflow: visible;
+  z-index: 5;
+  width: 100%;
+  position: absolute;
+  padding: 20px 20px;
 }
 
 h1 {
   font-size: 60px;
 }
+h4 {
+font-size: 20px;
+}
 
 p {
-  font-size: 20px;
+  font-size: 12px;
 }
 
 .header-logo {
   max-width: 200px;
-  margin-left: 40px;
+  margin-left: 20px;
   font-size: 25px;
   text-decoration: none;
-  position: absolute;
   top: 16px;
-}
-
-
-
-/* Links inside the navbar */
-.nav-top a {
-  float: right;
-  font-size: 20px;
-  width: auto;
-  text-decoration: none;
+  display: inline-block;
 }
 .header-logo a:link {
   text-decoration: none;
@@ -41,59 +40,99 @@ p {
 .header-logo a:visited {
   color: white;
 }
-
-/* The dropdown container */
-.dropdown {
+.nav-top{
+  display: inline-block;
   float: right;
-  overflow: hidden;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+  padding: 10px 3px;
 }
 
-/* Dropdown button */
-.dropdown .dropbtn {
-  font-size: 16px;
-  border: none;
-  outline: none;
-  color: white;
-  padding: 14px 16px;
-  background-color: inherit;
-  font-family: inherit;
-  /* Important for vertical align on mobile phones */
-  margin: 0;
-  /* Important for vertical align on mobile phones */
-}
-
-/* Add a background color to navbar links on hover */
-.navbar a:hover,
-.dropdown:hover .dropbtn {
-  background-color: none;
-}
-
-/* Dropdown content (hidden by default) */
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #4e4747;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+ margin: 5px auto;
+  width: auto;
   z-index: 10;
 }
-
-/* Links inside the dropdown */
-.dropdown-content a {
-  float: none;
-  color: white;
-  padding: 12px 16px;
+.dropdown a {
   text-decoration: none;
-  display: block;
-  text-align: left;
+  margin: 10px auto;
+  text-align: center;
 }
 
-/* Add a grey background color to dropdown links on hover */
-.dropdown-content a:hover {
-  background-color: rgb(102, 99, 99);
-}
-
-/* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
   display: block;
 }
+.dropdown-content a{
+  display: block;
+}
+.dropdown a:visited {
+  color: white;
+}
+
+
+
+/* banner slide */
+.mySlides {
+  display: none;
+}
+
+.top-banner {
+  position: relative;
+}
+
+.text-banner {
+  position: absolute;
+  color: white;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+a.btn {
+  font-size: 0.2rem;
+  padding: 5px 20px;
+  margin: auto 3px;
+}
+
+div.top-banner {
+display: block;
+}
+.top-banner .text-banner .btn01 {
+  background-color: black; 
+  text-decoration: none;
+  color: white;
+  border: rgb(255, 255, 255) 2px solid;
+  
+}
+
+.top-banner .text-banner .btn02 {
+  background-color: white;
+  text-decoration: none;
+  color: black;
+  border: white 2px solid;
+}
+
+.top-banner .banner-slide01 {
+  position: relative;
+  z-index: -4;
+}
+
+.container.container-card {
+text-align: center;
+margin: 100px auto;
+}
+
+.container.container-card .row {
+  margin: 30px 10px;
+  }
+
+.container.container-card .row h6 {
+padding: 20px 10px;
+}
+.container.container-card .row i {
+  margin-top: 30px;
+  }
