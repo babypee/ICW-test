@@ -14,7 +14,7 @@ body {
   position: relative;
   overflow: visible;
   overflow-y: visible;
-  overflow-x: hidden;
+  overflow-x: visible;
   font-family: 'Kanit', sans-serif;
   font-weight: normal;
   font-size: 18px;
@@ -347,13 +347,22 @@ div.top-banner {
 }
 
 
-.flex-container{
+.flex-container {
   display: flex;
+  flex-direction: row;
+  flex: 1;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
 .tab-gallery img {
+  object-fit: contain;
+  justify-content: center;
+
+
 width: 200px;
 height: 200px;
+
 }
 /* iPads (portrait and landscape) ----------- */
 @media only screen and (min-device-width : 768px) and (max-device-width : 991px) {
