@@ -1,4 +1,4 @@
-/*========== Reset ==========*/
+/*=============== Reset ===============*/
 
 *,
 *:before,
@@ -210,8 +210,7 @@ a {
   cursor: pointer;
 }
 
-/* Header */
-
+/*=============== Header ===============*/
 header {
   /* border: 3px rgb(236, 98, 98) dashed; */
   overflow: visible;
@@ -219,6 +218,14 @@ header {
   width: 100%;
   position: absolute;
   padding: 20px 20px;
+  
+}
+.container-header{
+  max-width: 1140px;
+  
+  justify-content: center;
+  align-items: center;
+  margin: auto;
 }
 
 .header-logo {
@@ -276,7 +283,7 @@ header {
   color: white;
 }
 
-/* banner slide */
+/*=============== Banner Slide ===============*/
 .mySlides {
   display: none;
 }
@@ -328,9 +335,11 @@ div.top-banner {
   z-index: -4;
 }
 
+/*=============== Card Section ===============*/
 .container.container-card {
   text-align: center;
   margin: 100px auto;
+  max-width: 1140px;
 }
 
 .container.container-card .row {
@@ -349,51 +358,85 @@ div.top-banner {
 .container.container-card .row i {
   margin-top: 30px;
 }
+/*=============== Counting Animation Section ===============*/
 
+.container-counting {
+  background-color: rgb(65, 65, 65);
+}
 
-.flex-container {
+.container-counting div.counting {
   display: flex;
   flex-direction: row;
-  flex: 1;
   flex-wrap: wrap;
-  width: 100%;
-}
 
-.tab-gallery img {
-  object-fit: contain;
+  margin: 40px auto;
+  height: 300px;
+  max-width: 1140px;
+}
+div.container-counting div {
+
   justify-content: center;
-  width: 200px;
-  height: 200px;
-
-}
-
-div.test-flex {
-  display: flex;
-  background-color: aqua;
-  height: 500px;
-  flex-direction: row;
   align-items: center;
-  justify-content: center;
+  flex: 25%;
+  
 }
 
+div.container-counting div p {
+padding: 90px auto;
+}
 
-.test-flex p {
-  background-color: coral;
-  border: 2px black solid;
-  border-radius: 10px;
-  padding: 10px;
-  margin: 10px;
-  width: 200px;
-  /* height: 50px; */
+div.container-counting div p.count {
+  color: white;
+  font-size: 3rem;
+  text-align: center;
+}
+div.container-counting div p.counting-content {
+  color: white;
+ 
   text-align: center;
 }
 
-/* iPads (portrait and landscape) ----------- */
-@media only screen and (min-device-width : 768px) and (max-device-width : 991px) {}
+/*=============== Gallery Tab Section ===============*/
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+}
+
+.tab-gallery div {
+  justify-content: center;
+  flex: 25%;
+}
+
+/*=============== Footer ===============*/
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+}
 
 
 
-/* Smartphones (portrait) ----------- */
+/*=============== Ipad ===============*/
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+  /* Styles */
+  .tab-gallery div {
+    flex: 50%;
+  }
+
+
+}
+
+
+
+/*=============== Mobile ===============*/
 @media only screen and (max-width : 767px) {
   /* Styles */
+  .tab-gallery div {
+  
+    flex: 100%;
+  }
+
 }
