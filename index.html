@@ -16,6 +16,7 @@
 
     <!-- Fontawesome -->
     <script src="https://kit.fontawesome.com/d0b45b2366.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -33,39 +34,49 @@
                 </a>
             </div>
 
-            <nav class="topnav">
-                <div class="dropdown">
-                    <a href="">HOME</a>
+            <nav class="topnav" id="TopNavId">
+               
+                <div class="dropdownn">
+                    <button class="dropbtn">HOME
+                        <i class="fa fa-caret-down"></i>
+                    </button>
                     <div class="dropdown-content">
                         <a href="#">Link 1</a>
                         <a href="#">Link 2</a>
                         <a href="#">Link 3</a>
                     </div>
                 </div>
-                <div class="dropdown">
-                    <a href="">ABOUT US</a>
+                <div class="dropdownn">
+                    <button class="dropbtn">ABOUT US
+                        <i class="fa fa-caret-down"></i>
+                    </button>
                     <div class="dropdown-content">
                         <a href="#">Link 1</a>
                         <a href="#">Link 2</a>
                         <a href="#">Link 3</a>
                     </div>
                 </div>
-                <div class="dropdown">
-                    <a href="">NEWS</a>
+                <div class="dropdownn">
+                    <button class="dropbtn">NEWS
+                        <i class="fa fa-caret-down"></i>
+                    </button>
                     <div class="dropdown-content">
                         <a href="#">Link 1</a>
                         <a href="#">Link 2</a>
                         <a href="#">Link 3</a>
                     </div>
                 </div>
-                <div class="dropdown">
-                    <a href="">CONTACT US</a>
+                <div class="dropdownn">
+                    <button class="dropbtn">CONTACT US
+                        <i class="fa fa-caret-down"></i>
+                    </button>
                     <div class="dropdown-content">
                         <a href="#">Link 1</a>
                         <a href="#">Link 2</a>
                         <a href="#">Link 3</a>
                     </div>
                 </div>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
             </nav>
         </div>
 
@@ -90,38 +101,38 @@
     <div class="container container-card">
         <h3>S E R V I C E</h3>
         <div class="row">
-            <div class="col col-lg-4 col-md-6 col-sm-12">
+            <div class="col col-lg-4 col-md-6 col-sm-12 col-12">
                 <i class="far fa-edit fa-2x"></i>
                 <h6>WEB DESIGN</h6>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quibusdam quod repudiandae officiis
                     exercitationem voluptatum eum officia animi aliquam eligendi!</p>
             </div>
-            <div class="col col-lg-4 col-md-6 col-sm-12">
+            <div class="col col-lg-4 col-md-6 col-sm-12 col-12">
                 <i class="fas fa-cog fa-2x"></i>
                 <h6>DEVEPLOPMENT</h6>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quibusdam quod repudiandae officiis
                     exercitationem voluptatum eum officia animi aliquam eligendi!</p>
             </div>
-            <div class="col col-lg-4 col-md-6 col-sm-12">
+            <div class="col col-lg-4 col-md-6 col-sm-12 col-12">
                 <i class="fab fa-apple fa-2x"></i>
                 <h6>BRANDING</h6>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quibusdam quod repudiandae officiis
                     exercitationem voluptatum eum officia animi aliquam eligendi!</p>
             </div>
 
-            <div class="col col-lg-4 col-md-6 col-sm-12">
+            <div class="col col-lg-4 col-md-6 col-sm-12 col-12">
                 <i class="far fa-edit fa-2x"></i>
                 <h6>WEB DESIGN</h6>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quibusdam quod repudiandae officiis
                     exercitationem voluptatum eum officia animi aliquam eligendi!</p>
             </div>
-            <div class="col col-lg-4 col-md-6 col-sm-12">
+            <div class="col col-lg-4 col-md-6 col-sm-12 col-12">
                 <i class="fas fa-cog fa-2x"></i>
                 <h6>DEVEPLOPMENT</h6>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quibusdam quod repudiandae officiis
                     exercitationem voluptatum eum officia animi aliquam eligendi!</p>
             </div>
-            <div class="col col-lg-4 col-md-6 col-sm-12">
+            <div class="col col-lg-4 col-md-6 col-sm-12 col-12">
                 <i class="fab fa-apple fa-2x"></i>
                 <h6>BRANDING</h6>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quibusdam quod repudiandae officiis
@@ -154,7 +165,7 @@
         </div>
     </div>
 
-    
+
 
 
 
@@ -162,7 +173,7 @@
     <div class="container-tab">
         <h3>GREAT WORK</h3>
         <!-- Tab links -->
-        
+
         <div class="tab">
             <button class="tablinks" onclick="opentab01(event, 'tab-all')" id="tab-defaultOpen">All</button>
             <button class="tablinks" onclick="opentab01(event, 'tab-branding')">Branding</button>
@@ -313,8 +324,16 @@
     </script>
 
 
-
-
+<script>
+    function myFunction() {
+  var x = document.getElementById("TopNavId");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
 
     <script src="app.js"></script>
 
