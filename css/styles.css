@@ -364,7 +364,7 @@ div.top-banner {
 .container-counting {
   background-color: rgb(65, 65, 65);
   padding: 30px 0;
-  margin: 40px auto;
+  margin: 180px auto;
 }
 
 .container-counting div.counting {
@@ -399,7 +399,53 @@ div.container-counting div p.counting-content {
   text-align: center;
 }
 
-/*=============== Gallery Tab Section ===============*/
+/*=============== Tab Section ===============*/
+
+
+/* Style the tab */
+.container-tab h3 {
+  color: black;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.tab {
+  display: flex;
+  overflow: hidden;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0;
+ 
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  background-color: inherit;
+  /* float: left; */
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  color: darkorange;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 0px;
+  border-top: none;
+}
+
 .flex-container {
   display: flex;
   flex-direction: row;
@@ -412,12 +458,13 @@ div.container-counting div p.counting-content {
   flex: 25%;
 }
 
+
 /*=============== Footer ===============*/
 footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 20px auto;
+  margin: 40px auto 10px auto;
 }
 
 
