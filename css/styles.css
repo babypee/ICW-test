@@ -241,8 +241,8 @@ header {
   text-decoration: none;
 }
 
-
-.nav-top {
+/*=============== Top Navigation Bar ===============*/
+.topnav {
   display: inline-block;
   float: right;
 }
