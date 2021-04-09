@@ -234,6 +234,15 @@ header {
   padding: 5px 20px;
   margin: 9px 3px;
 }
+.text-banner h3,p {
+  
+  margin: 15px auto;
+}
+.text-banner a.btn {
+  font-size: 1rem;
+  padding: 5px 20px;
+  margin: 9px 3px;
+}
 
 div.top-banner {
   display: block;
