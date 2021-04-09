@@ -1,19 +1,30 @@
-        var a = 0;
-        var b = 0;
-        var c = 0;
-        var d = 0;
-        var _intervalId01 = 0;
-        var _intervalId02 = 0;
-        var _intervalId03 = 0;
-        var _intervalId04 = 0;
+var a = 0;
+var b = 0;
+var c = 0;
+var d = 0;
+var _intervalId01 = 0;
+var _intervalId02 = 0;
+var _intervalId03 = 0;
+var _intervalId04 = 0;
 
-        function countup(countId,x) {
+function countupA(countId) {
+    document.getElementById(countId).innerHTML = a;
+    a++;
+}
+function countupB(countId) {
+    document.getElementById(countId).innerHTML = b;
+    b++;
+}
+function countupC(countId) {
+    document.getElementById(countId).innerHTML = c;
+    c++;
+}
+function countupD(countId) {
+    document.getElementById(countId).innerHTML = d;
+    d++;
+}
 
-            document.getElementById(countId).innerHTML = x;
-                x++;
-        }
-
-        _intervalId01 = setInterval(countup,1500,"pp-count01",a);
-        _intervalId02 = setInterval(countup,300,"pp-count02",b);
-        _intervalId03 = setInterval(countup,1000,"pp-count03",c);
-        _intervalId04 = setInterval(countup,1000,"pp-count04",d);
+_intervalId01 = setInterval(countupA, 1000, 'pp-count01');
+_intervalId02 = setInterval(countupB, 300, 'pp-count02');
+_intervalId03 = setInterval(countupC, 100, 'pp-count03');
+_intervalId04 = setInterval(countupD, 1200, 'pp-count04');
