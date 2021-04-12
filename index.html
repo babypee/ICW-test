@@ -76,11 +76,39 @@
                         <a href="#">Link 3</a>
                     </div>
                 </div>
-                <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
             </nav>
+
+            <div id="ham-icon">
+                <a href="#menu" class="ham">
+                    <span class="ham-top"></span>
+                    <span class="ham-mid"></span>
+                    <span class="ham-bottom"></span>
+                </a>
+            </div>
+
         </div>
 
     </header>
+
+    <div class="container-ham-menu">
+        <ul id="menuList" class="ham-menu">
+            <a href="#">
+                <li>HOME</li>
+            </a>
+            <a href="#">
+                <li>ABOUT US</li>
+            </a>
+            <a href="#">
+                <li>NEWS</li>
+            </a>
+            <a href="#">
+                <li>CONTACT US</li>
+            </a>
+        </ul>
+
+    </div>
+
+
 
     <!-- Slide Banner -->
     <div class="top-banner">
@@ -321,20 +349,31 @@
         }
         document.getElementById("tab-defaultOpen").click();
     </script>
+    
+
+    <script src="app.js"></script>
+    <!-- Test Java script for toggle active and unactive -->
 
 
     <script>
-        function myFunction() {
-            var x = document.getElementById("TopNavId");
-            if (x.className === "topnav") {
-                x.className += " responsive";
-            } else {
-                x.className = "topnav";
-            }
-        }
-    </script>
+        var btns = document.querySelectorAll('#ham-icon a');
 
-    <script src="app.js"></script>
+        btns.forEach(clickscan);
+
+        function clickscan(btns) {
+            btns.addEventListener("click", activeAdd);
+        };
+
+        function activeAdd() {
+            if (this.classList.contains("active")) {
+                this.classList.remove("active");
+                document.getElementById('menuList').classList.remove('active');
+            } else {
+                this.classList.add("active");
+                document.getElementById('menuList').classList.add('active');
+            }
+        };
+    </script>
 
 
 </body>

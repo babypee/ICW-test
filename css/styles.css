@@ -134,7 +134,8 @@ header {
   color: white;
 }
 
-.header-logo a:link , .header-logo a:hover {
+.header-logo a:link,
+.header-logo a:hover {
   text-decoration: none;
   color: inherit;
 }
@@ -159,7 +160,7 @@ header {
 }
 
 .dropdownn .dropbtn {
-  font-size: 17px;    
+  font-size: 17px;
   border: none;
   outline: none;
   color: white;
@@ -174,7 +175,7 @@ header {
   position: absolute;
   background-color: #f9f9f9;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 10;
 }
 
@@ -187,7 +188,8 @@ header {
   text-align: left;
 }
 
-.topnav a:hover, .dropdownn:hover .dropbtn {
+.topnav a:hover,
+.dropdownn:hover .dropbtn {
   background-color: #555;
   color: white;
 }
@@ -199,6 +201,49 @@ header {
 
 .dropdownn:hover .dropdown-content {
   display: block;
+}
+
+/*=============== Hamburger Menu ===============*/
+
+#menuList {
+  /* display: block; */
+  position: absolute;
+  right: 0;
+  width: 230px;
+
+  padding: 40px;
+  padding-top: 125px;
+  z-index: 1;
+
+  background: #ededed;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+
+  transform-origin: 0% 0%;
+  transform: translate(100%, 0);
+
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+}
+
+#menuList li {
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+#menuList a {
+  text-decoration: none;
+  color: #232323;
+
+  transition: color 0.3s ease;
+}
+
+#menuList a:hover {
+  color: tomato;
+}
+
+#menuList.active {
+  transform: none; 
 }
 
 
@@ -234,10 +279,13 @@ header {
   padding: 5px 20px;
   margin: 9px 3px;
 }
-.text-banner h3,p {
-  
+
+.text-banner h3,
+p {
+
   margin: 15px auto;
 }
+
 .text-banner a.btn {
   font-size: 1rem;
   padding: 5px 20px;
@@ -433,76 +481,79 @@ footer {
     flex: 100%;
   }
 
-  /* topnav */
-  .dropdownn .dropbtn {
+  .topnav {
     display: none;
   }
-  .topnav {
-  }
-  .topnav a.icon {
-    float: right;
-    display: inline-block;
-    font-size: 40px;
-    color: white;
-    text-decoration: none;
-    margin-right: 10px;
-  }
 
-
-  .topnav a:visited {
-  text-decoration: none;
-  outline: none;
-  color: inherit;
-}
-
-  .topnav.responsive {
-    position: relative;
-    background-color: rgb(109, 109, 109);
-  }
-
-  .topnav.responsive .icon {
-    position: absolute;
-    right: 20px;
-    top: 10px;
-  }
-
-  .topnav.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
-    color: white;
-  }
-
-  .topnav.responsive a.icon {
-  display: none;  
-  }
-  
-  
-  .topnav.responsive a:hover,
-  .topnav.responsive a:visited {
-    text-decoration: none;
-    outline: none;
-    color: inherit;
-  }
-  .topnav.responsive .dropdownn {
-    float: none;
-  }
-
-  .topnav.responsive .dropdown-content {
-    position: relative;
-  }
-
-  .topnav.responsive .dropdownn .dropbtn {
-    display: block;
-    width: 100%;
-    text-align: left;
-  }
 
   div.text-banner h3 {
     font-size: 20px;
   }
 
-footer {
-  margin-bottom: 40px;
-}
+  footer {
+    margin-bottom: 40px;
+  }
+
+  #ham-icon {
+    display: inline-block;
+    position: absolute;
+    float: right;
+    right: 20px;
+    padding: 20px 10px;
+    z-index: 22;
+  }
+
+  #ham-icon span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+
+    background: rgb(209, 209, 209);
+    border-radius: 3px;
+
+    z-index: 12;
+
+    transform-origin: 4px 0px;
+
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+      background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+      opacity 0.55s ease;
+  }
+
+  #ham-icon span.ham-top {
+    transform-origin: 0% 0%;
+  }
+
+  #ham-icon span.ham-mid {
+    transform-origin: 0% 100%;
+  }
+
+  #ham-icon .ham.active span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-12px, -12px);
+    background: black;
+  }
+
+  #ham-icon .ham.active span.ham-top {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+  }
+
+  #ham-icon .ham.active span.ham-mid {
+    transform: rotate(-45deg) translate(-7px, 9px);
+  }
+
+  
+
+
+
+
+
+
+
+
+
+
 }
