@@ -207,14 +207,14 @@ header {
 /*=============== Hamburger Menu ===============*/
 
 #menuList {
-  
+  display: none;
   position: absolute;
   right: 0;
   width: 230px;
 
   padding: 40px;
   padding-top: 125px;
-  z-index: 1;
+  z-index: 3;
 
   background: #ededed;
   list-style-type: none;
@@ -222,7 +222,7 @@ header {
   /* to stop flickering of text in safari */
 
   transform-origin: 0% 0%;
-  transform: translate(100%,0);
+  transform: translate(100%, 0);
 
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
 }
@@ -230,6 +230,7 @@ header {
 #menuList li {
   padding: 10px 0;
   font-size: 22px;
+  
 }
 
 #menuList a {
@@ -250,55 +251,51 @@ header {
 
 
 /*=============== Banner Slide ===============*/
-.mySlides {
-  display: none;
-}
 
-.top-banner {
+.banner-content {
   position: relative;
   height: 40%;
   width: 100%;
   overflow: hidden;
+  text-align: center;
 }
 
-.top-banner img {
+.banner-content img {
+  width: 100%;
+  z-index: -3;
   object-fit: cover;
   height: 500px;
-
 }
 
-.text-banner {
+.banner-content div.banner-text {
+
   position: absolute;
-  color: white;
-  text-align: center;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  /* z-index: 1; */
+
 }
 
-.text-banner a.btn {
-  font-size: 1rem;
-  padding: 5px 20px;
-  margin: 9px 3px;
-}
 
-.text-banner h3,
-p {
-
+.banner-content div.banner-text h3, .banner-content div.banner-text p {
+  text-align: center;
   margin: 15px auto;
+  color: #f9f9f9;
 }
 
-.text-banner a.btn {
+.banner-content div.banner-text a.btn {
   font-size: 1rem;
   padding: 5px 20px;
   margin: 9px 3px;
+  width: 150px;
+  display: inline-block;
+  justify-content: center;
+
 }
 
-div.top-banner {
-  display: block;
-}
 
-.top-banner .text-banner .btn01 {
+.banner-content div.banner-text .btn01 {
   background-color: black;
   text-decoration: none;
   color: white;
@@ -306,17 +303,40 @@ div.top-banner {
 
 }
 
-.top-banner .text-banner .btn02 {
+.banner-content div.banner-text .btn02 {
   background-color: white;
   text-decoration: none;
   color: black;
   border: white 2px solid;
 }
 
-.top-banner .banner-slide01 {
-  position: relative;
-  z-index: -4;
+
+.slick-prev, .slick-next {
+z-index: 2;
+
 }
+
+.slick-prev{
+  left: 30px;
+}
+
+.slick-next{
+  right: 30px;
+}
+.slick-dots {
+  bottom: 25px;
+}
+
+
+.slick-dots li button:before {
+  font-family: 'slick';
+  font-size: 10px;
+  line-height: 30px;
+  color: rgb(255, 255, 255);
+
+}
+
+
 
 /*=============== Card Section ===============*/
 .container.container-card {
@@ -334,7 +354,7 @@ div.top-banner {
   color: black;
 }
 
-.container.container-card h3 {
+.container.container-card h3, .container.container-card p {
   color: black;
 }
 
@@ -483,6 +503,10 @@ footer {
     flex: 100%;
   }
 
+  div.banner-content .banner-text h3, div.banner-content .banner-text p, 
+  .banner-content div.banner-text a.btn {
+    font-size: 0.9rem;
+  }
   .topnav {
     display: none;
   }
@@ -546,8 +570,10 @@ footer {
   #ham-icon .ham.active span.ham-mid {
     transform: rotate(-45deg) translate(-7px, 9px);
   }
- 
-   
+
+  #menuList {
+    display: block;
+  }
 
 
 
