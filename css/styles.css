@@ -14,11 +14,12 @@ body {
   position: relative;
   overflow: visible;
   overflow-y: visible;
-  overflow-x: visible;
+  overflow-x: hidden;
   font-family: 'Kanit', sans-serif;
   font-weight: normal;
   font-size: 18px;
   line-height: 1.5;
+  width: 100%;
 }
 
 
@@ -206,7 +207,7 @@ header {
 /*=============== Hamburger Menu ===============*/
 
 #menuList {
-  /* display: block; */
+  
   position: absolute;
   right: 0;
   width: 230px;
@@ -221,7 +222,7 @@ header {
   /* to stop flickering of text in safari */
 
   transform-origin: 0% 0%;
-  transform: translate(100%, 0);
+  transform: translate(100%,0);
 
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
 }
@@ -243,7 +244,8 @@ header {
 }
 
 #menuList.active {
-  transform: none; 
+  transform: none;
+
 }
 
 
@@ -544,15 +546,8 @@ footer {
   #ham-icon .ham.active span.ham-mid {
     transform: rotate(-45deg) translate(-7px, 9px);
   }
-
-  
-
-
-
-
-
-
-
+ 
+   
 
 
 
